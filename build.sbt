@@ -6,7 +6,7 @@ version := "1.0"
 
 organization := "colder"
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.4"
 
 scalacOptions += "-deprecation"
 
@@ -24,11 +24,12 @@ libraryDependencies ++= Seq(
     "commons-logging" % "commons-logging" % "1.1.1",
     "joda-time" % "joda-time" % "2.1",
     "org.joda" % "joda-convert" % "1.2",
-    "com.typesafe.akka" %% "akka-quartz-scheduler" % "1.2.0-akka-2.2.x",
-    "com.typesafe.akka" %% "akka-actor" % "2.2.3",
-    "com.typesafe.slick" %% "slick" % "2.0.0",
+    "com.typesafe.akka" % "akka-quartz-scheduler_2.10" % "1.2.0-akka-2.2.x",
+    "com.typesafe.akka" %% "akka-actor" % "2.3.7",
+    "com.typesafe.slick" %% "slick" % "2.1.0",
     "mysql" % "mysql-connector-java" % "5.1.15",
     "org.apache.commons" % "commons-dbcp2" % "2.0",
-    "org.slf4j" % "slf4j-nop" % "1.6.4"
+    "org.slf4j" % "slf4j-nop" % "1.6.4",
+    "org.scala-lang.modules" %% "scala-xml" % "1.0.2"
 )
 
