@@ -6,7 +6,7 @@ import org.joda.time.{DateTime, Duration}
 import org.joda.time.format._
 
 import scala.slick.driver.MySQLDriver.simple._
-import scala.concurrent.ExecutionContext.Implicits.global
+//import scala.concurrent.ExecutionContext.Implicits.global
 import utils._
 import InnerProtocol._
 
@@ -191,7 +191,7 @@ class BanLog(val db: Database,
     f" ${b.tpe}%-4s ${b.accountUser}%-20s ${dateToString(b.dateStart)} $end%-25s  Reason: ${b.reason}"
   }
 
-  def getExistingQ(user: User): Query[DBBanLogs, DBBanLog] = {
+  def getExistingQ(user: User) = {
     for {
       b <- banlogs if b.dateEnd.isNull && b.accountUser === user.account
     } yield (b)
